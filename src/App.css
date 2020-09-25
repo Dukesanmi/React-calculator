@@ -1,0 +1,197 @@
+body {
+  background-color: #133b3b;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#app-wrapper {
+  background-color: #133b3b;
+  width: 100%; 
+}
+
+#bckgrnd-img {
+  opacity: 0.3;
+  /*object-position: center;*/
+  object-fit: cover;
+}
+
+#calc-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center;*/
+  margin-left: 28rem;
+  /*margin-top: 2.5em;
+  margin-left: -1em;*/
+  position: absolute;
+  top: 4.7rem;
+  z-index: 899;
+}
+#calc-app > h5 {
+  color: #fff;
+  text-align: center;
+  margin-top: 2em;
+  /*margin-left: 6.5em;*/
+}
+#calc-app > h5 > a {
+  text-decoration: none;
+  color: silver;
+}
+#display-area {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #fff;
+  max-width: 70vw;
+  width: 28vw;
+  /*margin-bottom: -6em;*/
+  box-shadow: 0 2px 3px 0 #ccc;
+
+}
+#display {
+  color: #111;
+  display: flex;
+  justify-content: flex-end;
+}
+#display p {
+  margin-right: 0.5em;
+  font-size: 23px;
+  letter-spacing: 0.07em;
+}
+#compute {
+  max-width: 100%;
+  height: 40px;
+  background-color: #fff;
+  color: #111;
+  /*text-align: right;*/
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#compute p {
+  margin-right: 0.5em;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+.keypads {
+  display: flex;
+  flex-direction: column;
+}
+#keypad-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.keypad-row button {
+  outline: none;
+  max-width: 20vw;
+  height: 5.6vw;
+  width: 7vw;
+  font-size: 1rem;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 3px 0 rgba(204, 204, 204, 0.2);
+  cursor: pointer; 
+}
+.keypad-row button:hover {
+  /*background-color: #216b6b;*/
+  background-color: #3cc7c7;
+  color: #fff;
+}
+#clear {
+  border: none;
+  background-color: #133b3b;
+  color: #fff;
+  text-align: center;
+  outline: none;
+}
+#clear:hover {
+  background-color: rgba(19, 59, 59, 0.2);
+  color: #fff;
+}
+#equals {
+  border: none;
+  max-width: 70vw;
+  width: 14vw;
+  background-color: #133b3b;
+  outline: none;
+  color: #fff;
+}
+#equals:hover {
+  background-color: rgba(19, 59, 59, 0.2);
+  color: #fff;
+}
+#decimal {
+  font-weight: 600
+}
+
+/****************Media Queries*********************/
+@media only screen and (max-width: 980px) {
+
+  #calc-app {
+    margin-left: 21em;
+
+  }
+  #calc-app > h5 {
+    margin-top: 2em;
+  }
+  #display-area {
+    max-width: 50vw;
+  }
+  #display p {
+    font-size: 19px;
+  }
+  #compute {
+    max-width: 100%;
+  }
+  #compute p {
+    font-size: 12px;
+  }
+  .keypad-row button {
+    max-width: 15vw;
+    
+  }
+
+}
+
+@media only screen and (max-width: 750px) {
+  #calc-app {
+    margin-left: 12.5em; 
+  }
+  #calc-app > h5 {
+    margin-top: 2em;
+  }
+  #display-area {
+    min-width: 41.2vw;
+  }
+  .keypad-row button {
+    max-width: 20vw;
+    min-width: 10.3vw;
+    height: 10vw;
+  }
+  #equals {
+    width: 20.6vw;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  #calc-app {
+    margin-left: 6.5em; 
+  }
+  #calc-app > h5 {
+    margin-top: 2em;
+  }
+  #display-area {
+    min-width: 61.2vw;
+  }
+  .keypad-row button {
+    max-width: 20vw;
+    min-width: 15.3vw;
+    height: 14vw;
+  }
+  #equals {
+    width: 30.5vw;
+  }
+}
